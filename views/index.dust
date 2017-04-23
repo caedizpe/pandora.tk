@@ -1,0 +1,9 @@
+{>"layout" /}
+
+{<body}
+	{#SERVICES}
+		<div class="well">
+			{service_name}
+		</div>
+	{/SERVICES}	
+{/body}

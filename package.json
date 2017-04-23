@@ -1,0 +1,26 @@
+{
+  "name": "pandora.tk",
+  "version": "1.0.0",
+  "description": "Software services and music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pandora.tk",
+    "software",
+    "services",
+    "music"
+  ],
+  "author": "Carlos Eduardo Díaz Peñuela",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "*",
+    "consolidate": "*",
+    "dust": "*",
+    "dustjs-helpers": "*",
+    "dustjs-linkedin": "*",
+    "express": "*",
+    "pg": "*"
+  }
+}
