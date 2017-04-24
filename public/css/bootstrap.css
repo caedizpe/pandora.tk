@@ -1172,7 +1172,6 @@ hr {
   cursor: pointer;
 }
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -1187,6 +1186,12 @@ h6,
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
+}
+h2 {
+	 font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+    color: #772953;
 }
 h1 small,
 h2 small,
@@ -1586,6 +1591,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  background-image: url("desk-wood-texture.jpg");	
 }
 @media (min-width: 768px) {
   .container {
@@ -3057,8 +3063,8 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
+  color: #fff;
+  background-color: #000;
   border-color: #ccc;
 }
 .btn-default:focus,

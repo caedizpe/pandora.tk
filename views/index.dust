@@ -1,9 +1,27 @@
 {>"layout" /}
 
 {<body}
+	<h1>Services<h1>
 	{#SERVICES}
 		<div class="well">
-			{service_name}
+			<h2>{service_name}
+			<button class="btn btn-default pull-right" data-toggle="collapse" data-target="#service_{service_id}" 
+aria-expanded="false" aria-controls="service_{service_id}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button></h2>
+	
+	<div id="service_{service_id}" class="collapse">
+		<br />
+		<br />
+		<p><strong>Description: </strong>{service_description}</p>	
+		<p><strong>Price: </strong>{service_price}</p>
+		<hr />	
+		<button class="btn btn-default edit-service">
+			<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+		</button>
+		<button class="btn btn-danger delete-service">
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+	</div>
 		</div>
 	{/SERVICES}	
 {/body}
+
