@@ -39,6 +39,18 @@ app.get('/', function(req, res){
 	});
 });
 
+app.post('/add',function(req,res){
+    //Postgres connection
+	pg.connect(connect, function(err, client, done){
+		if (err){
+			return console.error('Error fetching client from pool', err);
+		}
+		client.query('INSERT INTO "SERVICES"(service_name,  service_price, service_description) VALUES($1, $2, $3)',[req.body.name,req.body.price,req.body.description]);
+        
+        done();
+        res.redirect('/');
+	});
+});
 //Server
 app.listen(3000,function(){
 	console.log('Server started on port 3000');
