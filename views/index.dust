@@ -22,7 +22,7 @@ aria-expanded="false" aria-controls="service_{service_id}"><span class="glyphico
 		<button class="btn btn-default edit-service">
 			<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 		</button>
-		<button class="btn btn-danger delete-service">
+		<button class="btn btn-danger delete-service" data-id = "{service_id}">
 			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		</button>
 	</div>
