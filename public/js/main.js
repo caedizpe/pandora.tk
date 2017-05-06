@@ -16,4 +16,11 @@ $(document).ready(function(){
             })
         }
     })
+    
+    $('.edit-service').on('click', function(){
+        $('#edit-form-name').val($(this).data('name'));
+        $('#edit-form-description').val($(this).data('description'));
+        $('#edit-form-price').val($(this).data('price'));
+        $('#edit-form-id').val($(this).data('id'));
+    });
 });

@@ -64,6 +64,19 @@ app.delete('/delete/:id', function(req, res){
         res.sendStatus(200);
 	});
 });
+
+app.post('/edit', function(req, res){
+    //Postgres connection
+	pg.connect(connect, function(err, client, done){
+		if (err){
+			return console.error('Error fetching client from pool', err);
+		}
+		client.query('UPDATE "SERVICES" SET service_name=$1, service_description=$2, service_price=$3 WHERE service_id = $4',[req.body.name,req.body.description, req.body.price, req.body.id]);
+        
+        done();
+        res.redirect('/');
+	});
+});
 //Server
 app.listen(3000,function(){
 	console.log('Server started on port 3000');

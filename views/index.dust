@@ -19,12 +19,15 @@ aria-expanded="false" aria-controls="service_{service_id}"><span class="glyphico
 		<p><strong>Description: </strong>{service_description}</p>	
 		<p><strong>Price: </strong>{service_price}</p>
 		<hr />	
-		<button class="btn btn-default edit-service">
+        
+		<button class="btn btn-default edit-service" data-toggle="modal" data-target="#editFormModal" data-id="{service_id}" data-name="{service_name}" data-description="{service_description}" data-price="{service_price}">
 			<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
 		</button>
+        
 		<button class="btn btn-danger delete-service" data-id = "{service_id}">
 			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		</button>
+        
 	</div>
 		</div>
 {/SERVICES} 
@@ -35,7 +38,7 @@ aria-expanded="false" aria-controls="service_{service_id}"><span class="glyphico
             <div class="modal-content">
                 <form method="post" action="/add">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss = "modal" aria-label="CLose"><span aria-hidden="true">&times;</span>></button>
+                        <button type="button" class="close" data-dismiss = "modal" aria-label="CLose"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel"> Add service</h4>
                     </div>
                     <div class="modal-body">
@@ -53,6 +56,42 @@ aria-expanded="false" aria-controls="service_{service_id}"><span class="glyphico
                             <label>Service price</label>
                             <input type="number" class="form-control"
                                    name="price"/>
+                        </div>  
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn default" data-dismiss="modal">Close</button>
+                        <input type="submit" class="btn btn-primary" value="Save" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+ <!-- Edit Form Modal-->
+    <div class="modal fade" id="editFormModal" tabindex="-1" role="dialog" aria-labelledby="editFormModallabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" action="/edit">
+                   <input type="hidden" id="edit-form-id" name="id">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss = "modal" aria-label="CLose"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"> Add service</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Service name</label>
+                            <input type="text" class="form-control"
+                                   name="name" id="edit-form-name"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Service description</label>
+                            <textarea class="form-control"
+                                      name="description" id="edit-form-description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Service price</label>
+                            <input type="number" class="form-control"
+                                   name="price" id="edit-form-price"/>
                         </div>  
                     </div>
                     <div class="modal-footer">
