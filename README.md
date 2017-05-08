@@ -20,3 +20,4 @@ To run the app in a command line type:
 
 node index.js
 
+Special acknowledgements to Traversy Media: https://www.youtube.com/user/TechGuyWeb, for the tutorial videos in which is based this application.

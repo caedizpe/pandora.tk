@@ -4,7 +4,7 @@
   "description": "Software services and music",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "pandora.tk",
@@ -16,11 +16,17 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "*",
+    "chai": "^3.5.0",
     "consolidate": "*",
     "dust": "*",
     "dustjs-helpers": "*",
     "dustjs-linkedin": "*",
     "express": "*",
+    "mocha": "^3.3.0",
     "pg": "*"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0"
   }
 }

@@ -1,4 +1,13 @@
 body{
 	margin-top:10px;
-	background:#ffffe6
+	background:#ffffe6;
+}
+
+.container{
+    background-image: url("desk-wood-texture.jpg");	
+}
+
+
+h2 {
+    color: #772953;
 }
